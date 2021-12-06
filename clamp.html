@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Responsive Typography using Clamp() function </title>
+</head>
+<body>
+<h1>How to create responsive typography using CSS</h1>
+<p>
+  Vestibulum molestie sapien eget orci pellentesque, et aliquam lectus convallis. Phasellus neque velit, ultricies ut
+  lacus at, finibus lobortis dui. Proin eget diam elit.
+</p>
+<h2>Three different methods explained</h2>
+<p>
+  Pellentesque sagittis nisl nec rhoncus porta. Quisque luctus turpis nec turpis consequat fermentum et vitae diam.
+</p>
+<style>
+  /* Declare text styles */
+  h1, h2, p {
+    /* Font minimum, preferred and maximum value */
+    font-size: clamp(var(--min), var(--val), var(--max));
+  }
+
+  /* Font size variables */
+  h1 {
+    --min: 2em; /* minimum value */
+    --val: 5vw; /* preferred value = 5% viewport width */
+    --max: 3em; /* maximum value */
+  }
+
+  h2 {
+    --min: 1.5em; /* minimum value */
+    --val: 4vw; /* preferred value = 4% viewport width */
+    --max: 2.25em; /* maximum value */
+  }
+
+  p {
+    --min: 1em; /* minimum value */
+    --val: 2.5vw; /* preferred value = 2.5% viewport width */
+    --max: 1.5em; /* maximum value */
+  }
+</style>
+</body>
+</html>

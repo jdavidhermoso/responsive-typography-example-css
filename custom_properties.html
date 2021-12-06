@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Responsive Typography using Custom Properties as modifier </title>
+</head>
+<body>
+<h1>How to create responsive typography using CSS</h1>
+<p>
+  Vestibulum molestie sapien eget orci pellentesque, et aliquam lectus convallis. Phasellus neque velit, ultricies ut
+  lacus at, finibus lobortis dui. Proin eget diam elit.
+</p>
+<h2>Three different methods explained</h2>
+<p>
+  Pellentesque sagittis nisl nec rhoncus porta. Quisque luctus turpis nec turpis consequat fermentum et vitae diam.
+</p>
+<style>
+  :root {
+    --text-multiplier: 1;
+  }
+
+  @media (min-width: 48rem) {
+    :root {
+      --text-multiplier: 1.5;
+    }
+  }
+
+  h1 {
+    font-size: calc(2em * var(--text-multiplier));
+  }
+
+  h2 {
+    font-size: calc(1.5em * var(--text-multiplier));
+  }
+
+  p {
+    font-size: calc(1em * var(--text-multiplier));
+  }
+</style>
+</body>
+</html>
